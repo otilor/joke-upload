@@ -38,12 +38,16 @@
             <div>
                 <h1 class="text-center">Jokes from other people</h1>
 
+                @forelse($jokes as $joke)
                 <div class="card mt-1">
                     <div class="card-body">
-                        <p>I love laughing and smiling.</p>
+                        <p>{{ $joke['joke']  }}</p>
                     </div>
-                    <div class="card-footer joke-text font-weight-bold">by Gabriel Akinyosoye</div>
+                    <div class="card-footer joke-text font-weight-bold">by {{$joke['author']}}</div>
                 </div>
+                    @empty
+                        <p>Welcome</p>
+                @endforelse
             </div>
             <div class="text-center mt-1">
                 <nav class="" aria-label="...">
