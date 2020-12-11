@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [JokeController::class, 'index']);
 
 Route::post('joke', [JokeController::class, 'store']);
