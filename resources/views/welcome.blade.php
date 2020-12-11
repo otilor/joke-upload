@@ -25,19 +25,18 @@
             <h1 class="text-danger text-center pt-3">Joke upload😄😄</h1>
 
             <div class="align-items-center">
-                <textarea class="pb-5 joke-text form-control" placeholder="Crack a funny joke"></textarea>
-                <input type="submit" class="form-control btn btn-success mt-2">
+                <form method="post" action="/joke">
+                    @include('flash::message')
+                    @csrf
+                    <textarea name="joke" class="pb-5 joke-text form-control" placeholder="Crack a funny joke"></textarea>
+                    <input type="submit" class="form-control btn btn-success mt-2">
+                </form>
             </div>
 
-            <hr class="bg-dark">
+            <hr class="mt-5 bg-dark">
 
             <div>
                 <h1 class="text-center">Jokes from other people</h1>
-                <div class="card">
-                    <div class="card-body">
-                        <p>The funnies joke of my life</p>
-                    </div>
-                </div>
 
                 <div class="card mt-1">
                     <div class="card-body">
