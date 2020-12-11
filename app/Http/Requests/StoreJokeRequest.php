@@ -3,7 +3,6 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use PharIo\Manifest\Application;
 
 class StoreJokeRequest extends FormRequest
 {
