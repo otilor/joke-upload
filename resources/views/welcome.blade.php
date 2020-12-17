@@ -29,7 +29,7 @@
                     @include('flash::message')
                     @csrf
                     <textarea name="joke" class="pb-5 joke-text form-control" placeholder="Crack a funny joke"></textarea>
-                    <input type="submit" class="form-control btn btn-success mt-2">
+                    <input type="submit" class="form-control btn btn-success mt-2" value="Submit">
                 </form>
             </div>
 
